@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Bella - Cardápio</title>
+
+  <!-- Bootstrap CSS (usado para estilos base: botões, navbar, container) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Nosso CSS (onde fica toda a responsividade, via Media Queries) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <!-- Escondida no celular e visível no tablet/computador via Media Query -->
+  <div class="topo-info">
+    <div class="container">
+      <span>📞 (61) 99999-9999</span>
+      <span>🕔 Aberto 18h às 23h</span>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🍕 Pizza Bella</a>
+
+        <!-- Botão hambúrguer (aparece só no celular, controlado pelo Bootstrap JS) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <!-- No celular: imagem embaixo do texto. No tablet/PC: lado a lado -->
+  <section class="banner">
+    <div class="container">
+      <div class="banner-linha">
+
+        <div class="banner-texto">
+          <h1>Sabor que conquista a cada fatia</h1>
+          <p>Massa fininha, molho caseiro e ingredientes fresquinhos. Feita na hora, do nosso jeito.</p>
+          <a href="#cardapio" class="btn btn-mostarda btn-lg mt-2">Ver Cardápio</a>
+        </div>
+
+        <div class="banner-imagem">
+          <img src="img/pizza-banner2.jpg" class="banner-img" alt="Pizza Bella">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VITRINE DE PRODUTOS (CARDÁPIO) -->
+  <section id="cardapio" class="container py-5">
+    <h2 class="text-center mb-2">Nosso Cardápio</h2>
+    <p class="text-center subtitulo mb-5">Escolha sua pizza favorita e peça agora mesmo</p>
+
+    <!-- CATEGORIA: PIZZAS SALGADAS -->
+    <h4 class="categoria-titulo">🍅 Pizzas Salgadas</h4>
+
+    <!--
+      .grade-cards: nosso grid personalizado.
+      A responsividade é feita pelas Media Queries no style.css:
+        - Celular (< 768px):   1 card por linha
+        - Tablet (>= 768px):   2 cards por linha
+        - Computador (>= 992px): 3 cards por linha
+    -->
+    <div class="grade-cards mb-5">
+
+      <!-- Card 1 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-mographe-29609013.jpg" alt="Pizza Margherita">
+            <span class="preco-tag">R$ 39,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Margherita</h5>
+            <p>Molho de tomate, mussarela e manjericão fresco.</p>
+            <a href="detalhes.html?id=1" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-natan-machado-fotografia-gastronomica-162809799-11176611.jpg" alt="Pizza Calabresa">
+            <span class="preco-tag">R$ 42,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Calabresa</h5>
+            <p>Molho de tomate, mussarela, calabresa fatiada e cebola.</p>
+            <a href="detalhes.html?id=2" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-pedrofurtadoo-33458021.jpg" alt="Pizza Quatro Queijos">
+            <span class="preco-tag">R$ 46,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Quatro Queijos</h5>
+            <p>Mussarela, provolone, parmesão e gorgonzola.</p>
+            <a href="detalhes.html?id=3" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-pedrofurtadoo-33457575.jpg" alt="Pizza Portuguesa">
+            <span class="preco-tag">R$ 44,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Portuguesa</h5>
+            <p>Presunto, ovos, cebola, azeitona, ervilha e mussarela.</p>
+            <a href="detalhes.html?id=4" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-pedrofurtadoo-31450857.jpg" alt="Pizza Frango com Catupiry">
+            <span class="preco-tag">R$ 45,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Frango com Catupiry</h5>
+            <p>Frango desfiado, catupiry cremoso e milho.</p>
+            <a href="detalhes.html?id=5" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-pedrofurtadoo-31450869.jpg" alt="Pizza Pepperoni">
+            <span class="preco-tag">R$ 47,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Pepperoni</h5>
+            <p>Molho de tomate, mussarela e fatias generosas de pepperoni.</p>
+            <a href="detalhes.html?id=6" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CATEGORIA: DOCES E BEBIDAS -->
+    <h4 class="categoria-titulo">🍰 Doces &amp; Bebidas</h4>
+
+    <div class="grade-cards">
+
+      <!-- Card 7 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-saulo-leite-1491182-17637073.jpg" alt="Pizza Doce de Chocolate com Morango">
+            <span class="preco-tag">R$ 38,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Pizza Chocolate com Morango</h5>
+            <p>Chocolate ao leite derretido com morangos fatiados.</p>
+            <a href="detalhes.html?id=7" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="item-card">
+        <div class="card-pizza">
+          <div class="card-imagem-wrap">
+            <img src="img/pexels-irene-vega-2151814552-34534006.jpg" alt="Refrigerante 2 Litros">
+            <span class="preco-tag">R$ 12,90</span>
+          </div>
+          <div class="card-pizza-body">
+            <h5>Refrigerante 2L</h5>
+            <p>Garrafa de 2 litros, gelada, para acompanhar sua pizza.</p>
+            <a href="detalhes.html?id=8" class="btn btn-verde w-100">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="depoimentos py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">O que nossos clientes dizem</h2>
+
+      <!--
+        .grade-depoimentos: 3 colunas no PC, 1 no celular (via Media Query)
+      -->
+      <div class="grade-depoimentos">
+
+        <div class="item-depoimento">
+          <div class="card-depoimento">
+            <div class="avatar">CR</div>
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="fst-italic">"A melhor pizza que já comi na vida! Massa fininha e crocante, igual a da Itália."</p>
+            <h6 class="mb-0">Claudio Rodrigues</h6>
+          </div>
+        </div>
+
+        <div class="item-depoimento">
+          <div class="card-depoimento">
+            <div class="avatar">NJ</div>
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="fst-italic">"Entrega rápida e a pizza chega sempre quentinha. Já virei cliente fiel!"</p>
+            <h6 class="mb-0">Neymar Junior</h6>
+          </div>
+        </div>
+
+        <div class="item-depoimento">
+          <div class="card-depoimento">
+            <div class="avatar">LC</div>
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="fst-italic">"Ingredientes fresquinhos e atendimento ótimo. Recomendo demais!"</p>
+            <h6 class="mb-0">Luís Castro</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="contato">
+    <div class="container py-5">
+
+      <!--
+        .footer-colunas: lado a lado no PC, empilhado e centralizado no celular
+        (controlado por Media Query no style.css)
+      -->
+      <div class="footer-colunas">
+        <div class="footer-col-esq">
+          <h5>🍕 Pizza Bella</h5>
+          <p class="mb-0">A pizzaria que une tradição italiana com aquele tempero brasileiro de fazer todo mundo voltar.</p>
+        </div>
+
+        <div class="footer-col-dir">
+          <p class="mb-1">📍 Universidade Católica de Brasília - UCB</p>
+          <p class="mb-1">📞 (61) 99999-9999</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-faixa text-center py-2">
+      <small>&copy; 2026 Pedro Sérgio Gomes César. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (necessário para o menu hambúrguer funcionar no celular) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
